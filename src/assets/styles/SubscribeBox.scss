@@ -1,0 +1,178 @@
+@import "main";
+
+.newsletter-container {
+    width: 100%;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+    background-color: $backgroundColor;
+
+    .newsletter-header {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-family: "Plus Jakarta Sans", serif;
+
+        .newsletter-badge {
+            display: inline-block;
+            color: #2563eb;
+            padding: 0.375rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+
+        .newsletter-title {
+            font-size: 50px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-family: "Plus Jakarta Sans", serif;
+            line-height: normal;
+            width: 75%;
+            margin: auto;
+
+            @media (max-width: 768px) {
+                font-size: 35px;
+                width: 90%;
+            }
+        }
+    }
+
+    .newsletter-form {
+        max-width: 1366px;
+        margin: 0 auto;
+        width: 90%;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .formWithButton {
+            display: flex;
+            background-color: rgba(17, 24, 39, 0.5);
+            border: 1px solid #1f2937;
+            height: 70px;
+            align-items: center;
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .input-wrapper {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    background-color: transparent;
+
+                    .mail-icon {
+                        position: absolute;
+                        left: 1rem;
+                        color: white;
+                        width: 1.25rem;
+                        height: 1.25rem;
+                    }
+
+                    .email-input {
+                        width: 100%;
+                        height: 3.5rem;
+                        background-color: transparent;
+                        border: none;
+                        color: white;
+                        padding: 0 1rem 0 3rem;
+                        border-radius: 0.375rem;
+                        font-family: "Plus Jakarta Sans", serif;
+
+                        &::placeholder {
+                            color: white;
+                        }
+
+                        &:focus {
+                            outline: none;
+                            border-color: $blueColor;
+                        }
+                    }
+                }
+            }
+
+            .submit-button {
+                display: flex;
+                width: 210px;
+                height: 55px;
+                background-color: $blueColor;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                transition: color 0.3s ease-in-out;
+                border: 1px solid $blueColor;
+                margin: 0 10px;
+                gap: 5px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #657bf5;
+                    transition: left 0.3s ease-in-out;
+                    z-index: 0;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-family: "Plus Jakarta Sans", serif;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .arrow {
+                    rotate: 40deg;
+                    font-size: 20px;
+                    border: none;
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    color: white;
+
+                    &::before {
+                        left: 0;
+                    }
+                }
+
+                &:hover .arrow {
+                    rotate: 90deg;
+                }
+            }
+
+            @media (max-width: 570px) {
+                flex-direction: column;
+                background-color: transparent;
+                border: none;
+                height: 100%;
+                gap: 10px;
+                justify-content: left;
+                align-items: first baseline;
+                margin: auto;
+            }
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+    }
+}

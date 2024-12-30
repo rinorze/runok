@@ -1,0 +1,204 @@
+@import "main";
+
+.achievements {
+    background-color: $backgroundColor;
+    padding: 5rem 0;
+
+    &__container {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    &__header {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        &-tag {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: $blueColor;
+            text-transform: uppercase;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+
+        &-title {
+            margin-top: 1rem;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            font-family: "Plus Jakarta Sans", serif;
+
+            @media (min-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
+
+.achievement-card {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    background-color: #11151c;
+    transition: transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    position: relative;
+    cursor: pointer;
+
+    &.animate-in {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+
+        .achievement-card__bg-overlay {
+            opacity: 0;
+        }
+
+        .achievement-card__blue-overlay {
+            opacity: 0.6;
+        }
+
+        // Change text color to white on hover
+        .achievement-card__title,
+        .achievement-card__subtitle,
+        .achievement-card__number {
+            color: white; // Change text color to white
+        }
+
+        .achievement-card__number {
+            border: 1px solid white;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        padding: 1rem 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .subTittleWithTittle {
+        display: flex; /* Stack subtitle and title */
+        align-items: center;
+        gap: 100px;
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        color: white; // Default color
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans", serif;
+        text-align: center; // Center subtitle
+    }
+
+    &__title {
+        margin-top: 0.5rem;
+        font-size: 54px;
+        font-weight: 700;
+        color: #464b54; // Default color
+        font-family: "Plus Jakarta Sans", serif;
+        text-align: center; // Center title
+    }
+
+    &__number {
+        font-size: 16px;
+        font-weight: 600;
+        color: white; // Default color
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid #464b54;
+        opacity: 0.9;
+        font-family: "Plus Jakarta Sans", serif;
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease;
+    }
+
+    &__bg-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: #1a1f2c;
+        transition: opacity 0.5s ease;
+    }
+
+    &__blue-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: $blueColor;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1050px) {
+    .achievement-card {
+        .subTittleWithTittle {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .achievement-card {
+        &__content {
+            position: relative;
+            z-index: 10;
+            padding: 2rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            width: 100%;
+        }
+
+        .subTittleWithTittle {
+            display: block;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        &__subtitle {
+            text-align: left;
+        }
+
+        &__title {
+            font-size: 34px;
+            text-align: left;
+        }
+    }
+}

@@ -1,0 +1,280 @@
+@import "main";
+
+.pricing-section {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 4rem 0rem;
+
+    .pricing-header {
+        text-align: center;
+        margin-bottom: 50px;
+
+        .subtitle {
+            color: $blueColor;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+
+        .title {
+            color: white;
+            font-size: 2.8rem;
+            margin: 15px 0;
+            font-weight: 700;
+            line-height: 1.2;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+    }
+
+    .pricing-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        padding: 0.5rem;
+        border-radius: 100px;
+        width: fit-content;
+        margin: 0 auto 3rem;
+        backdrop-filter: blur(10px);
+        font-family: $fontFamily;
+
+        .toggle-button {
+            position: relative;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: black;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: $fontFamily;
+
+            &.active {
+                background: #ebeefe;
+                border-radius: 100px;
+                color: #000;
+            }
+
+            .discount-badge {
+                background: #4361ee;
+                color: white;
+                padding: 0.3rem 0.7rem;
+                border-radius: 100px;
+                font-size: 0.7rem;
+                font-weight: bold;
+                font-family: $fontFamily;
+                margin-left: 10px;
+            }
+
+            @media (max-width: 440px) {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .pricing-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 1.5rem;
+
+        .pricing-card {
+            background: #11151c;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.05);
+            }
+
+            h3 {
+                color: #fff;
+                font-size: 1.5rem;
+                font-family: $fontFamily;
+            }
+
+            .price {
+                display: flex;
+                align-items: baseline;
+                color: #fff;
+                font-family: $fontFamily;
+                font-size: 1.5rem;
+
+                .currency {
+                    font-family: $fontFamily;
+                    font-size: 50px;
+                }
+
+                .amount {
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    font-family: $fontFamily;
+                }
+            }
+
+            .description {
+                color: rgba(255, 255, 255, 0.7);
+
+                font-size: 0.9rem;
+                font-family: $fontFamily;
+            }
+
+            .primary-button {
+                display: flex;
+                width: 100%;
+                height: 60px;
+                background-color: $blueColor;
+                position: relative;
+                overflow: hidden;
+                margin: 10px 0;
+                cursor: pointer;
+                color: white;
+                align-items: center;
+                justify-content: center;
+                transition: color 0.3s ease-in-out;
+                border: none;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: white;
+                    transition: left 0.3s ease-in-out;
+                    z-index: 0;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-family: "Plus Jakarta Sans", serif;
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.3s;
+                }
+
+                .arrow {
+                    rotate: 40deg;
+                    font-size: 20px;
+                    border: none;
+                    transition: 0.3s;
+                    color: white;
+                }
+
+                &:hover {
+                    color: black;
+
+                    &::before {
+                        left: 0;
+                        color: black;
+                    }
+
+                    a {
+                        color: black;
+                    }
+                }
+
+                &:hover .arrow {
+                    rotate: 90deg;
+                    color: black;
+                }
+            }
+
+            .secondary-button {
+                display: flex;
+                width: 100%;
+                height: 60px;
+                background-color: white;
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                color: black;
+                align-items: center;
+                justify-content: center;
+                transition: color 0.3s ease-in-out;
+                border: none;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $blueColor;
+                    transition: left 0.3s ease-in-out;
+                    z-index: 0;
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-family: "Plus Jakarta Sans", serif;
+                    position: relative;
+                    z-index: 1;
+                    transition: 0.3s;
+                }
+
+                .arrow {
+                    rotate: 40deg;
+                    font-size: 20px;
+                    border: none;
+                    transition: 0.3s;
+                    color: black;
+                }
+
+                &:hover {
+                    color: white;
+
+                    &::before {
+                        left: 0;
+                    }
+
+                    a {
+                        color: white;
+                    }
+                }
+
+                &:hover .arrow {
+                    rotate: 90deg;
+                    color: white;
+                }
+            }
+
+            .features {
+                margin-top: 2rem;
+                font-family: $fontFamily;
+
+                h4 {
+                    color: #fff;
+                    margin: 0 0 1rem;
+                    font-size: 0.9rem;
+                    font-family: $fontFamily;
+                }
+
+                p {
+                    color: rgba(255, 255, 255, 0.7);
+                    font-size: 13px;
+                    line-height: 1.5;
+                    font-family: $fontFamily;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 2rem 1rem;
+
+        .pricing-cards {
+            grid-template-columns: 1fr;
+        }
+    }
+}

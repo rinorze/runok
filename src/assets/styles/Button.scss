@@ -1,0 +1,56 @@
+@import "main";
+
+.button {
+    display: flex;
+    width: 210px;
+    height: 60px;
+    background-color: $blueColor;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease-in-out;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #657bf5;
+        transition: left 0.3s ease-in-out;
+        z-index: 0;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-family: "Plus Jakarta Sans", serif;
+        position: relative;
+        z-index: 1;
+    }
+
+    .arrow {
+        rotate: 40deg;
+        font-size: 20px;
+        border: none;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        color: white;
+
+        &::before {
+            left: 0;
+        }
+    }
+
+    &:hover .arrow {
+        rotate: 90deg;
+    }
+}

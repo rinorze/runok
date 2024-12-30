@@ -1,0 +1,104 @@
+@import "main";
+
+.testimonials {
+    padding: 4rem 0rem;
+    background-color: $backgroundColor;
+    color: #fff;
+    margin-bottom: 50px;
+
+    .testimonialsHeader {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        .testimonialsLabel {
+            color: #0066ff;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+
+        .testimonialsTitle {
+            font-size: 2.5rem;
+            margin-top: 1rem;
+            font-weight: 700;
+            font-family: "Plus Jakarta Sans", serif;
+        }
+    }
+
+    .testimonialsGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1300px;
+        margin: 0 auto;
+
+        .testimonialCard {
+            position: relative;
+            background-color: #11151c;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+
+            .testimonialImageWrapper {
+                position: absolute;
+                top: -50px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 10px solid $backgroundColor;
+            }
+
+            .testimonialImage {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .testimonialContent {
+                margin-top: 3rem;
+
+                .testimonialName {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    font-family: "Plus Jakarta Sans", serif;
+                }
+
+                .testimonialRole {
+                    color: #0066ff;
+                    font-size: 0.875rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    display: block;
+                    margin-bottom: 1.5rem;
+                    font-family: "Plus Jakarta Sans", serif;
+                }
+
+                .testimonialFeedback {
+                    color: #999;
+                    line-height: 1.6;
+                    font-size: 1rem;
+                    font-family: "Plus Jakarta Sans", serif;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 3rem 1rem;
+
+        .testimonialsTitle {
+            font-size: 2rem;
+        }
+
+        .testimonialsGrid {
+            grid-template-columns: 1fr;
+            gap: 4rem;
+        }
+    }
+}

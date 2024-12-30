@@ -1,0 +1,162 @@
+@import "main";
+
+.serviceHero {
+    position: relative;
+    height: 50vh;
+    background-image: url("../images//service-cta.jpg");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    width: 100%;
+
+    .heroOverlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #344ac9;
+        mix-blend-mode: multiply;
+    }
+
+    .heroContent {
+        position: relative;
+        max-width: 1300px;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+
+        .heroLabel {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            opacity: 0.9;
+            color: white;
+            font-family: $fontFamily;
+        }
+
+        .heroTitle {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            padding-top: 20px;
+            color: white;
+            font-family: $fontFamily;
+            width: 80%;
+        }
+
+        .heroSubtitle {
+            display: block;
+            margin-top: 1rem;
+            color: white;
+            font-family: $fontFamily;
+        }
+
+        .heroButton {
+            display: flex;
+            width: 210px;
+            height: 60px;
+            background-color: transparent;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 0;
+            cursor: pointer;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease-in-out;
+            border: 1px solid white;
+            font-weight: 400;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background-color: #657bf5;
+                transition: left 0.3s ease-in-out;
+                z-index: 0;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                font-family: "Plus Jakarta Sans", serif;
+                position: relative;
+                z-index: 1;
+            }
+
+            .arrow {
+                rotate: 40deg;
+                font-size: 20px;
+                border: none;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                color: white;
+                border: 1px solid $blueColor;
+
+                &::before {
+                    left: 0;
+                    border: none;
+                }
+            }
+
+            &:hover .arrow {
+                rotate: 90deg;
+            }
+        }
+
+        .heroButtonArrow {
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .serviceHero {
+        .heroContent {
+            flex-direction: column;
+            width: 90%;
+            align-items: baseline;
+
+            .heroTitle {
+                width: 100%;
+                font-size: 35px;
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heroContent > * {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.heroLabel {
+    animation-delay: 0.2s;
+}
+.heroTitle {
+    animation-delay: 0.4s;
+}
+.heroButton {
+    animation-delay: 0.6s;
+}

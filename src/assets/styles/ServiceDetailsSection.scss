@@ -1,0 +1,337 @@
+@import "main";
+
+.cmsContainer {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #ffffff;
+    display: flex;
+    gap: 30px;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        font-family: $fontFamily;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-family: $fontFamily;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin: 1rem 0;
+        font-family: $fontFamily;
+    }
+
+    p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        font-family: $fontFamily;
+        font-size: 14px;
+    }
+}
+
+.servicesDetailsSections {
+    width: 70%;
+}
+
+.heroSection {
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 1.1rem;
+
+    .heroContent {
+        flex: 1;
+        font-family: $fontFamily;
+    }
+
+    .heroImage {
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+
+    .serviceCard {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        padding: 2rem 2rem 2.5rem 2rem;
+        transition: transform 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-family: $fontFamily;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 30px;
+
+        .serviceIcon {
+            font-size: 2.5rem;
+            color: $blueColor;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: 25px;
+            padding: 0;
+            margin: 0;
+        }
+
+        p {
+            font-weight: 200;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+.processSection {
+    margin-bottom: 4rem;
+
+    .stepsGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+
+        .stepCard {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 2.5rem 2.2rem 2.5rem;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: $fontFamily;
+            display: flex;
+            align-items: baseline;
+            justify-content: left;
+            gap: 30px;
+
+            .stepNumber {
+                font-size: 1rem;
+                color: white;
+                padding: 10px 15px 10px 15px;
+                background-color: $blueColor;
+                border-radius: 50%;
+                font-weight: 3 00;
+                margin-bottom: 1rem;
+            }
+
+            h3 {
+                font-weight: 400;
+                padding: 0;
+                margin: 0;
+            }
+
+            p {
+                font-weight: 200;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
+    h2 {
+        text-align: left;
+    }
+}
+
+.categories {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.categoriesSection {
+    background-color: #11151c;
+    padding: 20px;
+
+    .categoriesList {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+
+        .categoryItem {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-family: $fontFamily;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                background: $blueColor;
+            }
+        }
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 26px;
+        font-weight: 600;
+    }
+}
+
+.categoriesSectionTwo {
+    background-color: #11151c;
+    padding: 20px;
+
+    h2 {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .categoriesListTwo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .categoryCardTwo {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s ease;
+
+        .categoryContentTwo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .categoryIconTwo {
+            font-size: 1.5rem;
+            color: #ffffff;
+        }
+
+        .categoryInfoTwo {
+            h3 {
+                color: #ffffff;
+                font-size: 1rem;
+                margin: 0;
+                font-weight: 400;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.6);
+
+                &:hover {
+                    color: $blueColor;
+                }
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 0.875rem;
+                margin: 0.25rem 0 0 0;
+                font-weight: 100;
+            }
+        }
+
+        .categoryButtonTwo {
+            background: #3b5bdb;
+            color: #ffffff;
+            border: none;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: black;
+            }
+
+            svg {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    h2 {
+        text-align: left;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .categoryCardTwo:nth-child(1) {
+        border-bottom: 1px solid rgb(128, 128, 128);
+    }
+}
+
+@media (max-width: 868px) {
+    .cmsContainer {
+        padding: 1rem;
+        flex-direction: column;
+
+        .servicesDetailsSections {
+            width: 100%;
+            margin: auto;
+
+            .processSection {
+                margin-bottom: 4rem;
+
+                .stepsGrid {
+                    grid-template-columns: repeat(1, 1fr);
+
+                    .stepCard {
+                        align-items: center;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+
+        .categories {
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-family: $fontFamily;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            font-family: $fontFamily;
+        }
+    }
+
+    .servicesGrid,
+    .stepsGrid,
+    .categoriesList {
+        grid-template-columns: 1fr;
+    }
+}

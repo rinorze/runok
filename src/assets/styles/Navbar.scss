@@ -1,0 +1,279 @@
+@import "main";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: transparent;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    height: 150px;
+    display: flex;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+
+    &.scrolled {
+        height: 100px;
+        background-color: $navbarBackgroundColor;
+        margin-bottom: 100px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+
+        .headerLogo {
+            display: flex;
+            justify-content: baseline;
+
+            .logoLink {
+                img {
+                    width: 170px;
+                    height: auto;
+                }
+            }
+        }
+
+        .headerRight {
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+            gap: 50px;
+
+            .menu {
+                ul {
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    gap: 15px;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        position: relative;
+                        font-size: 18px;
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            transition: color 0.3s;
+
+                            &:hover {
+                                color: $blueColor;
+                            }
+
+                            &.activeLink {
+                                color: $blueColor;
+                            }
+                        }
+
+                        .dropdownContainer {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background-color: $navbarBackgroundColor;
+
+                            .dropdownContent {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+
+                                li {
+                                    width: 150px;
+                                    height: 50px;
+                                    padding-left: 15px;
+                                    font-size: 16px;
+                                    background-color: $navbarBackgroundColor;
+                                }
+                            }
+                        }
+                    }
+
+                    li:hover .dropdownContainer {
+                        display: flex;
+                    }
+
+                    .servicesLink .arrow {
+                        transition: 0.5s;
+                        padding-top: 7px;
+                    }
+
+                    .servicesLink:hover .arrow {
+                        color: $blueColor;
+                    }
+                }
+            }
+
+            .mobile-menu {
+                display: none;
+                color: white;
+                font-size: 24px;
+                cursor: pointer;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $blueColor;
+                }
+            }
+
+            .sidebar-toggle {
+                align-items: center;
+                text-align: center;
+                padding: 19px 19px 11px 19px;
+                border-radius: 50%;
+                border: 1px solid white;
+                transition: 0.5s;
+                cursor: pointer;
+                color: white;
+
+                &:hover {
+                    border: 1px solid $blueColor;
+                    color: $blueColor;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block !important;
+            }
+
+            .sidebar-toggle {
+                display: none;
+            }
+        }
+    }
+}
+
+.mobile-menu-links {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: $navbarBackgroundColor;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(100px);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    &.open {
+        transform: translateX(-300px);
+    }
+
+    .mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .mobile-logo {
+            img {
+                width: 120px;
+                height: auto;
+            }
+        }
+
+        .close-icon {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $blueColor;
+                border-color: $blueColor;
+            }
+        }
+    }
+
+    .mobile-nav-links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 15px 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgb(85, 85, 85);
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $blueColor;
+                }
+            }
+
+            &.mobile-services {
+                .service-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+
+                    svg {
+                        color: white;
+                        transition: color 0.3s ease;
+                    }
+                }
+
+                .mobile-dropdown {
+                    margin-left: 20px;
+                    margin-top: 10px;
+                    list-style: none;
+
+                    li {
+                        margin: 10px 0;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-contact {
+        margin-bottom: 40px;
+
+        h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-family: "Plus Jakarta Sans", serif;
+            color: white;
+            font-weight: 400;
+        }
+
+        .contact-details {
+            color: #8b8b8b;
+
+            p {
+                margin-bottom: 10px;
+                font-family: "Plus Jakarta Sans", serif;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -1,0 +1,139 @@
+$primaryColor: #0066ff;
+$textColor: #fff;
+$cardBg: #11151c;
+$bodyBg: #02050a;
+@import "main";
+
+.workProcess {
+    background-color: $bodyBg;
+    padding: 100px 20px;
+    color: $textColor;
+    font-family: "Plus Jakarta Sans", serif;
+
+    .workProcessHeader {
+        max-width: 800px;
+        margin: 0 auto 60px;
+        text-align: center;
+
+        .workProcessLabel {
+            color: $primaryColor;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .workProcessTitle {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    .workProcessCards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        flex-wrap: wrap;
+
+        .processCard {
+            background-color: $cardBg;
+            padding: 40px;
+            flex: 1;
+            max-width: 350px;
+            transition: transform 0.3s ease;
+
+            .processCardNumber {
+                display: inline-block;
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 5px 20px;
+                border: 1px solid rgba($primaryColor, 0.3);
+                border-radius: 20%;
+                margin-bottom: 25px;
+                font-family: "Plus Jakarta Sans", serif;
+                text-align: left;
+            }
+
+            .processCardTitle {
+                font-size: 24px;
+                font-weight: 600;
+                margin: 0 0 20px;
+                font-family: "Plus Jakarta Sans", serif;
+            }
+
+            .processCardDescription {
+                color: rgba($textColor, 0.7);
+                font-size: 16px;
+                line-height: 1.6;
+                margin: 0 0 30px;
+                font-family: "Plus Jakarta Sans", serif;
+            }
+
+            .processCardButton {
+                background: none;
+                border: none;
+                color: $primaryColor;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                padding: 0;
+                font-family: "Plus Jakarta Sans", serif;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .workProcessTitle {
+        font-size: 36px;
+    }
+
+    .workProcessCards {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .workProcessTitle {
+        font-size: 30px;
+    }
+
+    .workProcessCards {
+        justify-content: center;
+    }
+
+    .processCard {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .workProcess {
+        padding: 60px 10px;
+    }
+
+    .workProcessTitle {
+        font-size: 24px;
+    }
+
+    .workProcessLabel {
+        font-size: 12px;
+    }
+
+    .processCard {
+        padding: 20px;
+    }
+}

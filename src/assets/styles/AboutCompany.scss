@@ -1,0 +1,111 @@
+@import "main";
+
+.aboutSection {
+    padding: 6rem 1rem;
+    color: white;
+
+    .aboutContent {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            padding: 0 1rem;
+        }
+    }
+
+    .aboutText {
+        .aboutLabel {
+            color: #646cff;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+            font-family: $fontFamily;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 2rem 0;
+            font-family: $fontFamily;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 2rem 0 1rem;
+            font-family: $fontFamily;
+
+            @media (max-width: 768px) {
+                font-size: 1.25rem;
+            }
+        }
+
+        p {
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-family: $fontFamily;
+            font-size: 12px;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .tabButtons {
+        display: flex;
+        gap: 1rem;
+        margin: 2rem 0;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        button {
+            background: #11151c;
+            border: none;
+            color: #94a3b8;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 0.9rem;
+            font-family: $fontFamily;
+
+            &:hover {
+                color: white;
+            }
+
+            &.active {
+                color: white;
+                background: $blueColor;
+            }
+        }
+    }
+
+    .aboutImages {
+        position: relative;
+
+        .mainImage {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
