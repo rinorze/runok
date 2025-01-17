@@ -5,6 +5,7 @@ import img1 from "../assets/images/arrows.png";
 import { LiaMapMarkerAltSolid } from "react-icons/lia";
 import { LuPhone } from "react-icons/lu";
 import { SlClock } from "react-icons/sl";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
@@ -24,7 +25,14 @@ export default function Contact() {
         <div className="container">
           <div className="contactContent">
             <p>CONTACT US</p>
-            <h1>Let&apos;s working together</h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              viewport={{ once: true }}
+            >
+              Let&apos;s working together
+            </motion.h1>
             <p>
               Thank you for your interest in Attach Web Agency. We&apos;re
               excited to hear from you and discuss...

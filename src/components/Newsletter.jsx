@@ -2,6 +2,7 @@ import "../assets/styles/Newsletter.scss";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 import img from "../assets/images/reward-bg.png";
+import { motion } from "framer-motion";
 
 const AchievementCard = ({ number, title, subtitle, image }) => {
   return (
@@ -83,10 +84,24 @@ const Achievements = () => {
     <section className="achievements">
       <div className="achievements__container">
         <div className="achievements__header">
-          <span className="achievements__header-tag">OUR CONTACT US</span>
-          <h2 className="achievements__header-title">
+          <motion.span
+            className="achievements__header-tag"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            OUR CONTACT US
+          </motion.span>
+          <motion.h2
+            className="achievements__header-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             Have Any Contact! Say The People Trust Us
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="achievements__grid">

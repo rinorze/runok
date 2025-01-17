@@ -1,16 +1,31 @@
 import { Link } from "react-router-dom";
 import "../assets/styles/Cta.scss";
 import img from "../assets/images/cta-img-1.png";
+import { motion } from "framer-motion";
 
 function Cta() {
   return (
     <div className="heroCta">
-      <div className="small-text">HAVE YOU PROJECT IN MIND?</div>
+      <motion.div
+        className="small-text"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        HAVE YOU PROJECT IN MIND?
+      </motion.div>
 
       <div className="heading-container">
-        <h1 className="heading-foreground">
+        <motion.h1
+          className="heading-foreground"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           Let&apos;s make something great together
-        </h1>
+        </motion.h1>
 
         <h1 className="heading-background">Get started!</h1>
       </div>

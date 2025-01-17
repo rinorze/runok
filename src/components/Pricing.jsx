@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdArrowUp } from "react-icons/io";
 import "../assets/styles/Pricing.scss";
+import { motion } from "framer-motion";
 
 const PricingSection = () => {
   const [isYearly, setIsYearly] = useState(true);
@@ -30,8 +31,24 @@ const PricingSection = () => {
   return (
     <div className="pricing-section">
       <div className="pricing-header">
-        <span className="subtitle">OUR PRICING PLANS</span>
-        <h2 className="title">Our Flexible Pricing</h2>
+        <motion.span
+          className="subtitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          OUR PRICING PLANS
+        </motion.span>
+        <motion.h2
+          className="title"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+          Our Flexible Pricing
+        </motion.h2>
       </div>
       <div className="pricing-toggle">
         <button

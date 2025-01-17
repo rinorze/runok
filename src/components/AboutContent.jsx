@@ -4,23 +4,37 @@ import "../assets/styles/AboutContent.scss";
 import aboutImg from "../assets/images/aboutImg.png";
 import { Link } from "react-router-dom";
 import { IoMdArrowUp } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
     <section className="heroSection">
       <div className="heroContent">
         <div className="heroImages">
-          <img src={aboutImg} alt="Team collaboration" className="mainImage" />
+          <motion.img
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            src={aboutImg}
+            alt="Team collaboration"
+            className="mainImage"
+          />
           <div className="circleDecoration"></div>
         </div>
 
         <div className="heroText">
           <span className="subtitle">ABOUT OUR COMPANY</span>
 
-          <h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             We design and develop outstanding Digital Products and digital-first
             Brands.
-          </h1>
+          </motion.h1>
 
           <p>
             Platea vehicula rutrum curae magna taciti acut malesuada inceptos

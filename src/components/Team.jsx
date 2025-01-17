@@ -10,6 +10,7 @@ import img2 from "../assets/images/team-2.png";
 import img3 from "../assets/images/team-3.png";
 import img4 from "../assets/images/team-4.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Team = () => {
   const teamMembers = [
@@ -40,11 +41,17 @@ const Team = () => {
       <section className="team-section">
         <div className="team-header">
           <span className="subtitle">TEAM MEMBERS</span>
-          <h2 className="title">
+          <motion.h2
+            className="title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             Our Expert Team Would Like
             <br />
             To Hear From You!
-          </h2>
+          </motion.h2>
         </div>
         <div className="team-grid">
           {teamMembers.map((member, index) => (

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "../assets/styles/Studio.scss";
 import { IoIosArrowForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const Studio = () => {
   const processSteps = [
@@ -28,11 +29,17 @@ const Studio = () => {
     <section className="workProcess">
       <div className="workProcessHeader">
         <span className="workProcessLabel">WORK PROCESS</span>
-        <h2 className="workProcessTitle">
+        <motion.h2
+          className="workProcessTitle"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           QUALITY SERVICE FOR GROWTH
           <br />
           YOUR BRANDING IDENTITY
-        </h2>
+        </motion.h2>
       </div>
 
       <div className="workProcessCards">

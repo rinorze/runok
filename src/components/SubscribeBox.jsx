@@ -3,6 +3,7 @@ import { FiMail } from "react-icons/fi";
 import { IoMdArrowUp } from "react-icons/io";
 import "../assets/styles/SubscribeBox.scss";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const SubscribeBox = () => {
   const [email, setEmail] = useState("");
@@ -27,12 +28,25 @@ const SubscribeBox = () => {
     <div className="newsletter-container">
       <div className="newsletter-header">
         <div className="newsletter-badge">NEWSLETTER</div>
-        <h2 className="newsletter-title">
+        <motion.h2
+          className="newsletter-title"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           Ready To Get Started Of Strategy Business.
-        </h2>
+        </motion.h2>
       </div>
 
-      <form onSubmit={handleSubmit} className="newsletter-form">
+      <motion.form
+        onSubmit={handleSubmit}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="newsletter-form"
+      >
         <div className="formWithButton">
           <div className="form-group">
             <div className="input-wrapper">
@@ -55,7 +69,7 @@ const SubscribeBox = () => {
           </button>
         </div>
         {error && <p className="error-message">{error}</p>}
-      </form>
+      </motion.form>
     </div>
   );
 };

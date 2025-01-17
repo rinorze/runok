@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../assets/styles/AboutCompany.scss";
 import bg from "../assets/images/chrome_DJpvsmmnEb.png";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const [activeTab, setActiveTab] = useState("goal");
@@ -45,7 +46,14 @@ export default function AboutSection() {
       <div className="aboutContent">
         <div className="aboutText">
           <span className="aboutLabel">ABOUT COMPANY</span>
-          <h1>Our Main Goal to Satisfied local & Global Clients</h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            Our Main Goal to Satisfied local & Global Clients
+          </motion.h1>
           <div className="tabButtons">
             <button
               className={activeTab === "mission" ? "active" : ""}
@@ -71,7 +79,15 @@ export default function AboutSection() {
         </div>
 
         <div className="aboutImages">
-          <img src={bg} alt="Team at work" className="mainImage" />
+          <motion.img
+            src={bg}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            alt="Team at work"
+            className="mainImage"
+          />
         </div>
       </div>
     </div>
