@@ -1,5 +1,7 @@
 # Runok (practice rebuild)
 
+**Live:** https://runok-eta.vercel.app
+
 A React rebuild of **Runok**, a web-agency website design sold on ThemeForest (item 52213654). I built it to practise turning a finished design into React components: layout, responsive styles, routing and scroll animations.
 
 **This is not a real agency and not my design.** The layout, copy, photos and contact details come from the theme (the address, phone number and email are the theme's placeholders), and some text is still placeholder lorem ipsum. The code is mine.
