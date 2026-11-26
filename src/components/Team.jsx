@@ -9,7 +9,6 @@ import img1 from "../assets/images/team-1.png";
 import img2 from "../assets/images/team-2.png";
 import img3 from "../assets/images/team-3.png";
 import img4 from "../assets/images/team-4.png";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const Team = () => {
@@ -60,18 +59,18 @@ const Team = () => {
                 <img src={member.image} alt={member.name} />
                 <div className="overlay">
                   <div className="social-icons">
-                    <Link to="/" className="social-icon">
+                    <span className="social-icon" aria-hidden="true">
                       <FaFacebookF />
-                    </Link>
-                    <Link to="/" className="social-icon">
+                    </span>
+                    <span className="social-icon" aria-hidden="true">
                       <FaTwitter />
-                    </Link>
-                    <Link to="/" className="social-icon">
+                    </span>
+                    <span className="social-icon" aria-hidden="true">
                       <FaPinterestP />
-                    </Link>
-                    <Link to="/" className="social-icon">
+                    </span>
+                    <span className="social-icon" aria-hidden="true">
                       <FaInstagram />
-                    </Link>
+                    </span>
                   </div>
                 </div>
               </div>

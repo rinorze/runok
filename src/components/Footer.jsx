@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-column">
-          <img className="footer-logo" src={logo} />
+          <img className="footer-logo" src={logo} alt="Runok" />
           <p className="footer-description">
             Centric applications production before front end verifies visualize
             front end results and value added
@@ -72,19 +72,20 @@ const Footer = () => {
 
       <div className="footer-copyright">
         <h3 className="copyrightText">
-          Copyright © 2024 Runok. All Rights Reserved.
+          Practice project by Rinor Zeqiri: a React rebuild of the Runok
+          ThemeForest design. Not a real agency.
         </h3>
         <div className="footer-social-container">
-          <a href="#" className="footer-social-link" aria-label="Facebook">
+          <span className="footer-social-link" aria-hidden="true">
             <FaFacebook size={20} />
-          </a>
-          <a href="#" className="footer-social-link" aria-label="Twitter">
+          </span>
+          <span className="footer-social-link" aria-hidden="true">
             <FaTwitter size={20} />
-          </a>
-          <a href="#" className="footer-social-link" aria-label="Instagram">
+          </span>
+          <span className="footer-social-link" aria-hidden="true">
             <FaInstagram size={20} />
-          </a>
-          <a href="#" className="footer-social-link" aria-label="Github">
+          </span>
+          <a href="https://github.com/rinorze/runok" className="footer-social-link" aria-label="Source code on GitHub" target="_blank" rel="noreferrer">
             <FaGithub size={20} />
           </a>
         </div>

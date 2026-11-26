@@ -96,13 +96,13 @@ const Carousel = () => {
             <h2>Services We Provide</h2>
             <div className="navigation">
               <div className="navButtons">
-                <button onClick={prevSlide} className="navButton">
+                <button onClick={prevSlide} className="navButton" aria-label="Previous service">
                   <IoArrowBackSharp size={24} />
                 </button>
                 <span className="currentSlide">
                   {currentSlide + 1} / {services.length}
                 </span>
-                <button onClick={nextSlide} className="navButton">
+                <button onClick={nextSlide} className="navButton" aria-label="Next service">
                   <IoArrowForwardSharp size={24} />
                 </button>
               </div>

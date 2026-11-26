@@ -16,3 +16,10 @@
   background-color: black;
   color: white; 
 }
+/* Page-header titles (About, Contact, Portfolio, Service, Service Details) sit in a
+   100px box at 60px; on a phone "Service Details" wraps and ran into the breadcrumb.
+   !important because the page styles nest these selectors three levels deep. */
+@media (max-width: 600px) {
+  .h1 { height: auto !important; }
+  .h1 h1 { font-size: 40px !important; line-height: 1.15; text-align: center; }
+}

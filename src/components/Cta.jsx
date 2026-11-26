@@ -17,7 +17,7 @@ function Cta() {
       </motion.div>
 
       <div className="heading-container">
-        <motion.h1
+        <motion.h2
           className="heading-foreground"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,14 +25,14 @@ function Cta() {
           viewport={{ once: true }}
         >
           Let&apos;s make something great together
-        </motion.h1>
+        </motion.h2>
 
-        <h1 className="heading-background">Get started!</h1>
+        <h2 className="heading-background">Get started!</h2>
       </div>
 
       <div className="image-container">
         <img src={img} alt="Team working together" className="circle-image" />
-        <Link to="/Contact" className="arrow-button">
+        <Link to="/Contact" className="arrow-button" aria-label="Contact us">
           <svg
             viewBox="0 0 24 24"
             fill="none"

@@ -23,7 +23,7 @@ const HeroSection = () => {
         <div className="heroText">
           <span className="subtitle">ABOUT OUR COMPANY</span>
 
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -31,7 +31,7 @@ const HeroSection = () => {
           >
             We design and develop outstanding Digital Products and digital-first
             Brands.
-          </motion.h1>
+          </motion.h2>
 
           <p>
             Platea vehicula rutrum curae magna taciti acut malesuada inceptos

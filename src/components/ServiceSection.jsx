@@ -69,7 +69,7 @@ const Index = () => {
               style={{ backgroundImage: `url(${service.image})` }}
             >
               <div className="service-content">
-                <img className="service-icon" src={service.icon} />
+                <img className="service-icon" src={service.icon} alt="" />
                 <button className="read-more-btn">
                   <Link to="/ServiceDetails">Get Started Now </Link>
                   <IoMdArrowUp className="arrow" />

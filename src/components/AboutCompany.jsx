@@ -46,14 +46,14 @@ export default function AboutSection() {
       <div className="aboutContent">
         <div className="aboutText">
           <span className="aboutLabel">ABOUT COMPANY</span>
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
           >
             Our Main Goal to Satisfied local & Global Clients
-          </motion.h1>
+          </motion.h2>
           <div className="tabButtons">
             <button
               className={activeTab === "mission" ? "active" : ""}

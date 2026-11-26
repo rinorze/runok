@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "../assets/styles/infiniteScroll.scss";
+import "../assets/styles/InfiniteScroll.scss";
 
 const InfiniteScroll = ({ text, className, direction }) => {
   const content = [...text, ...text];
