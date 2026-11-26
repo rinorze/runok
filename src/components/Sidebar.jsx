@@ -18,7 +18,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <div className="logo">
             <img src={logo} alt="Runok" className="sidebar-logo" />
           </div>
-          <button className="close-button" onClick={onClose}>
+          <button className="close-button" onClick={onClose} aria-label="Close menu">
             <IoClose size={24} />
           </button>
         </div>
@@ -46,18 +46,18 @@ const Sidebar = ({ isOpen, onClose }) => {
         </div>
 
         <div className="social-links">
-          <Link to="#">
+          <span aria-hidden="true">
             <FaFacebookF />
-          </Link>
-          <Link to="#">
+          </span>
+          <span aria-hidden="true">
             <FaTwitter />
-          </Link>
-          <Link to="#">
+          </span>
+          <span aria-hidden="true">
             <FaInstagram />
-          </Link>
-          <Link to="#">
+          </span>
+          <span aria-hidden="true">
             <FaPinterestP />
-          </Link>
+          </span>
         </div>
       </div>
     </div>

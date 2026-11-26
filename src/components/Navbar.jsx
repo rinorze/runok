@@ -79,9 +79,7 @@ export default function Navbar() {
                       >
                         Services
                       </NavLink>
-                      <NavLink>
-                        <IoIosArrowDown className="arrow" />
-                      </NavLink>
+                      <IoIosArrowDown className="arrow" aria-hidden="true" />
 
                       <div className="dropdownContainer">
                         <ul className="dropdownContent">

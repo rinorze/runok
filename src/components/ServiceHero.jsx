@@ -10,7 +10,7 @@ const ContactHero = () => {
       <div className="heroContent">
         <div>
           <span className="heroLabel">MAKE AN APPOINTMENT</span>
-          <motion.h1
+          <motion.h2
             className="heroTitle"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const ContactHero = () => {
             viewport={{ once: true }}
           >
             Have Any Projects On Minds! Contact Us
-          </motion.h1>
+          </motion.h2>
         </div>
         <button className="heroButton">
           <Link to="/Contact">Get Started Now </Link>

@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="heroText">
           <span className="subtitle">ABOUT OUR COMPANY</span>
 
-          <motion.h1
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -34,7 +34,7 @@ const HeroSection = () => {
           >
             We design and develop outstanding Digital Products and digital-first
             Brands.
-          </motion.h1>
+          </motion.h2>
 
           <p>
             Platea vehicula rutrum curae magna taciti acut malesuada inceptos
@@ -44,11 +44,11 @@ const HeroSection = () => {
 
           <div className="features">
             <div className="featureItem">
-              <img className="featureIcon" src={aboutIcon1} />
+              <img className="featureIcon" src={aboutIcon1} alt="" />
               <span>Professional Creative Team Members</span>
             </div>
             <div className="featureItem">
-              <img className="featureIcon" src={aboutIcon2} />
+              <img className="featureIcon" src={aboutIcon2} alt="" />
               <span>Provide Market Standard Service to Client&apos;s</span>
             </div>
           </div>

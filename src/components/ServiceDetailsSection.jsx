@@ -76,7 +76,7 @@ const Index = () => {
             <img src={img} alt="Team working" />
           </div>
           <div className="heroContent">
-            <h1>Content Management System</h1>
+            <h2>Content Management System</h2>
             <p>
               A Content Management System (CMS) is a software application that
               allows users to create, manage, and modify digital content, such
@@ -92,7 +92,7 @@ const Index = () => {
         <div className="servicesGrid">
           {services.map((service, index) => (
             <div className="serviceCard" key={index}>
-              <img className="serviceIcon" src={service.icon} />
+              <img className="serviceIcon" src={service.icon} alt="" />
               <div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -150,34 +150,30 @@ const Index = () => {
             <div className="categoryCardTwo">
               <div className="categoryContentTwo">
                 <div className="categoryIconTwo">
-                  <img src={img1} />
+                  <img src={img1} alt="Team working together at a laptop" />
                 </div>
                 <div className="categoryInfoTwo">
                   <h3>User Experience Design</h3>
-                  <Link to="#">
-                    <p>Download</p>
-                  </Link>
+                  <p>Download</p>
                 </div>
               </div>
-              <button className="categoryButtonTwo">
+              <span className="categoryButtonTwo" aria-hidden="true">
                 <FaArrowRight />
-              </button>
+              </span>
             </div>
             <div className="categoryCardTwo">
               <div className="categoryContentTwo">
                 <div className="categoryIconTwo">
-                  <img src={img2} />
+                  <img src={img2} alt="Team planning a project" />
                 </div>
                 <div className="categoryInfoTwo">
                   <h3>User Experience Design</h3>
-                  <Link to="#">
-                    <p>Download</p>
-                  </Link>
+                  <p>Download</p>
                 </div>
               </div>
-              <button className="categoryButtonTwo">
+              <span className="categoryButtonTwo" aria-hidden="true">
                 <FaArrowRight />
-              </button>
+              </span>
             </div>
           </div>
         </div>

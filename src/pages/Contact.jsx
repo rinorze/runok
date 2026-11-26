@@ -25,14 +25,14 @@ export default function Contact() {
         <div className="container">
           <div className="contactContent">
             <p>CONTACT US</p>
-            <motion.h1
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
             >
-              Let&apos;s working together
-            </motion.h1>
+              Let&apos;s work together
+            </motion.h2>
             <p>
               Thank you for your interest in Attach Web Agency. We&apos;re
               excited to hear from you and discuss...
@@ -43,7 +43,7 @@ export default function Contact() {
                   <LiaMapMarkerAltSolid className="icon" />
                 </div>
                 <div className="content">
-                  <h1>Our Address</h1>
+                  <h2>Our Address</h2>
                   <p>2690 Hilton Street Victoria Road, New York, Canada</p>
                 </div>
               </div>
@@ -52,9 +52,9 @@ export default function Contact() {
                   <LuPhone className="icon" />
                 </div>
                 <div className="content">
-                  <h1>Phone Number</h1>
-                  <Link>(+65) - 48596 - 5789</Link>
-                  <Link>hello@acadu.com</Link>
+                  <h2>Phone Number</h2>
+                  <p>(+65) - 48596 - 5789</p>
+                  <p>hello@acadu.com</p>
                 </div>
               </div>
               <div className="listItem">
@@ -62,7 +62,7 @@ export default function Contact() {
                   <SlClock className="icon" />
                 </div>
                 <div className="content">
-                  <h1>Hours of Operation</h1>
+                  <h2>Hours of Operation</h2>
                   <p>Monday - Friday: 09:00 - 20:00</p>
                   <p>Sunday & Saturday: 10:30 - 22:00</p>
                 </div>
